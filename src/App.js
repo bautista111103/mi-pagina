@@ -1,11 +1,14 @@
-
-import "./styles/App.css";
+import React from "react";
+import "./styles/style.css";
+import ResponsiveAppBar from "./components/NavBar.js"
 
 function App() {
   return (
+    <>
     <div className="App">
-      <p>hola</p>
+      <ResponsiveAppBar/>
     </div>
+    </>
   );
 }
 

@@ -6,7 +6,7 @@ import Home from "./pages/Home.jsx"
 import Teams from './pages/Teams.jsx';
 import Stadiums from "./pages/Stadiums.jsx";
 import Matches from './pages/Matches.jsx'
-// import ReactPlayer from 'react-player'
+
 
 function App() {
   return (

@@ -12,8 +12,11 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { Link as LinkRouter } from "react-router-dom"
+// import { connect } from 'react-redux';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+
+const opcionesNabVar = [{to:"/home", name:"Home"}, {to:"/teams", name:"Teams"}, {to:"/matches", name:"Matches"}, {to:"/stadiums", name:"stadiums"}];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
@@ -87,10 +90,12 @@ function ResponsiveAppBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
+              {opcionesNabVar.map((page) => (
+               <LinkRouter  key={page.name} to={page.to} onClick={handleCloseNavMenu}>
+                  <MenuItem>
+                    <Typography textAlign="center">{page.name}</Typography>
+                  </MenuItem>
+                </LinkRouter>
               ))}
             </Menu>
           </Box>
@@ -114,14 +119,14 @@ function ResponsiveAppBar() {
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            {opcionesNabVar.map((page) => (
+              <LinkRouter key={page.name} to = {page.to} onClick={handleCloseNavMenu}> 
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                {page.name}
               </Button>
+              </LinkRouter>
             ))}
           </Box>
 
@@ -148,9 +153,10 @@ function ResponsiveAppBar() {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
+                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                    <Typography textAlign="center">{setting}</Typography>
+                  </MenuItem>
+                
               ))}
             </Menu>
           </Box>

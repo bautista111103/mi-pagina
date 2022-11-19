@@ -10,9 +10,24 @@
     flex-direction:column;
     width: 100%;
     min-height:100%;
+    background-color:#550065;
+}
+.css-hip9hq-MuiPaper-root-MuiAppBar-root{
+    background-color:#452a46 !important;
+    opacity:80%;
+}
+a{
+    text-decoration:none !important;
+}
+.css-1q39md6-MuiButtonBase-root-MuiButton-root{
+    text-decoration:none !important;
 }
 .reproductor-video{
     margin-top:1rem;
     object-fit:cover;
     width:100%;
+}
+
+.lorem{
+    height:100vh;
 }

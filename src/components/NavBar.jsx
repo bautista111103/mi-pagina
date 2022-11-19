@@ -16,7 +16,7 @@ import { Link as LinkRouter } from "react-router-dom"
 // import { connect } from 'react-redux';
 
 
-const opcionesNabVar = [{to:"/home", name:"Home"}, {to:"/teams", name:"Teams"}, {to:"/matches", name:"Matches"}, {to:"/stadiums", name:"stadiums"}];
+const opcionesNabVar = [{to:"/home", name:"Home"}, {to:"/teams", name:"Teams"}, {to:"/groups", name:"Groups"}, {to:"/matches", name:"Matches"}, {to:"/stadiums", name:"stadiums"}];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
@@ -58,7 +58,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            FIFA WORLD CUP 2022
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
